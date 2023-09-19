@@ -1,0 +1,188 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "iNotebook",
+    "dateExported": "2023-09-19T07:10:54.990Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "927a2af5-a0a6-41e8-8b49-36f7d748f819",
+            "name": "Authentication",
+            "containerId": "",
+            "created": "2023-09-01T08:49:28.394Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f22df252-919c-4bd7-8f8a-be511e4c4d20",
+            "name": "Notes",
+            "containerId": "",
+            "created": "2023-09-04T09:48:33.827Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "be25f7ce-c1d0-402c-abac-4aa29798246b",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "927a2af5-a0a6-41e8-8b49-36f7d748f819",
+            "name": "Create a new user",
+            "url": "http://localhost:5000/api/auth/createuser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-01T08:54:29.976Z",
+            "modified": "2023-09-12T09:04:29.372Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"name9\",\n  \"email\": \"email9@gmail.com\",\n  \"password\": \"pass9\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "22f4c986-407d-4783-ba48-0f70b11d8091",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "927a2af5-a0a6-41e8-8b49-36f7d748f819",
+            "name": "User login using credentials",
+            "url": "http://localhost:5000/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-09-01T12:22:50.200Z",
+            "modified": "2023-09-08T06:57:47.983Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"email6@gmail.com\",\n  \"password\": \"pass6\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cbc5c9de-e2bc-416f-b26d-77def501d1f7",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "927a2af5-a0a6-41e8-8b49-36f7d748f819",
+            "name": "Get User Data",
+            "url": "http://localhost:5000/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-09-01T13:46:35.833Z",
+            "modified": "2023-09-04T09:47:24.171Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmMWI3NDE5MjhlMTA1MjYyNmIyYTBkIn0sImlhdCI6MTY5MzU3MTIxMX0.mlpy0PQrWK3uefHAISFQCnr_g_y56YVvQjQYtTvHwdQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "650a67d6-e510-4941-a9e0-6c0c98ee8a17",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "f22df252-919c-4bd7-8f8a-be511e4c4d20",
+            "name": "Fetch all notes",
+            "url": "http://localhost:5000/api/note/fetchallnotes",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-09-04T09:48:49.521Z",
+            "modified": "2023-09-06T11:18:30.958Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmMWI3NDE5MjhlMTA1MjYyNmIyYTBkIn0sImlhdCI6MTY5MzU3MTIxMX0.mlpy0PQrWK3uefHAISFQCnr_g_y56YVvQjQYtTvHwdQ"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5af75eb1-115b-4a3b-b919-1817c8516af7",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "f22df252-919c-4bd7-8f8a-be511e4c4d20",
+            "name": "Add new note",
+            "url": "http://localhost:5000/api/note/addnote",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-09-04T10:39:05.121Z",
+            "modified": "2023-09-05T06:43:34.174Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmMWI3NDE5MjhlMTA1MjYyNmIyYTBkIn0sImlhdCI6MTY5MzU3MTIxMX0.mlpy0PQrWK3uefHAISFQCnr_g_y56YVvQjQYtTvHwdQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Title 4\",\n  \"description\": \"Description 4\",\n  \"tag\": \"Personal\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7b6ef07a-313f-45d6-abaa-09cf6c9609bd",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "f22df252-919c-4bd7-8f8a-be511e4c4d20",
+            "name": "Update note",
+            "url": "http://localhost:5000/api/note/updatenote/64f5ba2d615548f1af66e04f",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-09-04T13:12:17.115Z",
+            "modified": "2023-09-04T13:16:44.081Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmMWI3NDE5MjhlMTA1MjYyNmIyYTBkIn0sImlhdCI6MTY5MzU3MTIxMX0.mlpy0PQrWK3uefHAISFQCnr_g_y56YVvQjQYtTvHwdQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Title 1 U\",\n  \"description\": \"Description 1 U\",\n  \"tag\": \"Personal\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f4b03716-24b5-4ef1-a83c-30290c7a56ac",
+            "colId": "f2e46c69-4798-455b-8099-0dd00f4a1689",
+            "containerId": "f22df252-919c-4bd7-8f8a-be511e4c4d20",
+            "name": "Delete note",
+            "url": "http://localhost:5000/api/note/deletenote/64f5ba4f615548f1af66e056",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-09-05T05:41:13.043Z",
+            "modified": "2023-09-05T05:57:28.003Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmMWI3NDE5MjhlMTA1MjYyNmIyYTBkIn0sImlhdCI6MTY5MzU3MTIxMX0.mlpy0PQrWK3uefHAISFQCnr_g_y56YVvQjQYtTvHwdQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
